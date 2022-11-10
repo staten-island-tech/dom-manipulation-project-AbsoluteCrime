@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <p id="reminder">Make sure to open your JavaScript console!</p>
+      <h3>Avengers</h3>
+      <ul>
+        <li class="avenger original">Iron Man</li>
+        <li class="avenger original">Captain America</li>
+        <li class="avenger original">Black Widow</li>
+        <li class="avenger original">Thor</li>
+        <li class="avenger original">Hulk</li>
+        <li class="avenger original">Hawkeye</li>
+        <li class="avenger new">Falcon</li>
+        <li class="avenger new">Scarlet Witch</li>
+        <li class="avenger new">War Machine</li>
+        <li class="avenger new">Vision</li>
+        <li class="avenger new">Spider-Man</li>
+        <li class="avenger deceased">Spider-Man</li>
+        <li class="associate">Ant Man</li>
+        <li class="associate">Winter Soldier</li>
+        <li class="associate">Black Panther</li>
+      </ul>
+    </div>
+    <script>
+      //Shortcut for QuerySelectorAll
+      const qsa = (els) => document.querySelectorAll(els);
+
+      //First, let's grab all of the Avengers
+      const allAvengers = qsa(".avenger");
+      console.log(allAvengers); // nodeList
+
+      const allAvengersArray = Array.from(allAvengers);
+
+      const originalAvengers = allAvengersArray.filter((node) => {
+        if (node.classList[1] === "original") {
+          return true;
+        }
+        return false;
+      });
+      console.log(originalAvengers);
+
+      const associatesArray = Array.from(qsa(".associate"));
+    </script>
+  </body>
+</html>
