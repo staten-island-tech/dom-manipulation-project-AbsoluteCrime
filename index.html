@@ -8,46 +8,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div>
-      <p id="reminder">Make sure to open your JavaScript console!</p>
-      <h3>Avengers</h3>
+    <div id="big-black-box">
+      <p id="text">this is a big black box, now go look at console</p>
+
+      <button type="button" id="btn">Click Me!</button>
       <ul>
-        <li class="avenger original">Iron Man</li>
-        <li class="avenger original">Captain America</li>
-        <li class="avenger original">Black Widow</li>
-        <li class="avenger original">Thor</li>
-        <li class="avenger original">Hulk</li>
-        <li class="avenger original">Hawkeye</li>
-        <li class="avenger new">Falcon</li>
-        <li class="avenger new">Scarlet Witch</li>
-        <li class="avenger new">War Machine</li>
-        <li class="avenger new">Vision</li>
-        <li class="avenger new">Spider-Man</li>
-        <li class="avenger deceased">Spider-Man</li>
-        <li class="associate">Ant Man</li>
-        <li class="associate">Winter Soldier</li>
-        <li class="associate">Black Panther</li>
+        <li class="point">1</li>
+        <li class="point">2</li>
+        <li class="point">3</li>
       </ul>
     </div>
-    <script>
-      //Shortcut for QuerySelectorAll
-      const qsa = (els) => document.querySelectorAll(els);
 
-      //First, let's grab all of the Avengers
-      const allAvengers = qsa(".avenger");
-      console.log(allAvengers); // nodeList
-
-      const allAvengersArray = Array.from(allAvengers);
-
-      const originalAvengers = allAvengersArray.filter((node) => {
-        if (node.classList[1] === "original") {
-          return true;
-        }
-        return false;
-      });
-      console.log(originalAvengers);
-
-      const associatesArray = Array.from(qsa(".associate"));
-    </script>
+    <script src="index.js"></script>
   </body>
 </html>
