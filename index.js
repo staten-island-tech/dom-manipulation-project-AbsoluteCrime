@@ -5,7 +5,7 @@ const DOMSelectors = {
 };
 const cat = "meow";
 /* DOMSelectors.box.insertAdjacentHTML("afterend", `<h1>We are an ${cat}</h1>`); */
-DOMSelectors.button.addEventListener("click", function* () {
+DOMSelectors.button.addEventListener("click", function () {
   let input = DOMSelectors.input.value;
   DOMSelectors.box.insertAdjacentHTML("beforeend", `<p> ${input}</p>`);
   DOMSelectors.input.value = "";
